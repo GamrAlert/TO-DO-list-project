@@ -48,10 +48,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
         }
     }
-
-
-
-
     inputBox.addEventListener("focus", () => {doAnim = false; stopAnim(); inputBox.placeholder = "";});
     inputBox.addEventListener("blur", () => {
         if(localStorage.length === 0) {

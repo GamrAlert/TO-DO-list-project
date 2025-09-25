@@ -1,14 +1,9 @@
 /* we want to create new objects and put them into 'child-contents' with the text inputted in the submit box*/
 
 document.addEventListener("DOMContentLoaded", () => {
-
-
-
-    const taskCount = document.getElementById("task-count");
     const MAXCHAR = 41;
     const submitButton = document.getElementById("submit");
     const todoInput = document.getElementById("text_input");
-    const deleteButton = document.getElementById("delete");
 
     function createTaskElement(key,element){
         if(element.length > MAXCHAR){
@@ -18,20 +13,25 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const newElement = document.createElement("div")
         newElement.classList.add("list-item")
+
         const div = document.getElementById("child-contents")
         newElement.dataset.key = key;
+
         let nodeText = document.createElement("p")
         nodeText.classList.add("list-text")
+
         let removeButton = document.createElement("div")
         removeButton.classList.add("delete-button")
         removeButton.classList.add("button-format")
         removeButton.innerText = "🗑"
         removeButton.style.fontSize = "1.1em";
+
         let completeButton = document.createElement("div")
         completeButton.classList.add("complete-button")
         completeButton.classList.add("button-format")
         completeButton.innerText = "✔";
         completeButton.style.fontSize = "100%";
+
         nodeText.textContent = element;
         div.appendChild(newElement);
         newElement.appendChild(nodeText);
@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
         })
         completeButton.addEventListener("click", () => {
 
-            // create CSS class for this. if (text has class) class remove, else add class to text. (and animations!)
+
             nodeText.classList.toggle("completed")
 
 

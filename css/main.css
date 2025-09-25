@@ -8,18 +8,14 @@ body{
     overflow: hidden;
 }
 #flex-container{
-
     display:flex;
     justify-content: center;
     align-items: center;
-
     min-width:100vw;
     min-height:100vh;
-
 }
 #flex-child {
     background-color: #000000;
-
     border-radius: 10px;
     display:flex;
     width:100vw;
@@ -28,7 +24,6 @@ body{
     flex-direction: column;
 }
 #child-contents{
-
     gap:1%;
     align-items: center;
     justify-content: flex-start;
@@ -61,7 +56,6 @@ body{
 .header{
     text-align:center;
 }
-
 .list-item{
     font-size:90%;
     background-color: #000000;
@@ -77,24 +71,19 @@ body{
 .delete-button{
     background-color: #333333;
     left: 90%;
-
 }
 .complete-button{
     background-color: #333333;
     left: 85%;
-
 }
 .list-text{
     margin-left:10px;
     max-width: 90%;
     align-self: center;
     justify-self: center;
-
     color: white;
     transition: color 0.5s linear;
-
 }
-
 .button-format{
     outline: 1px solid black;
     user-select: none;
@@ -139,25 +128,18 @@ body{
 input[type="text"]{
     all: unset;
 }
-
 #text_input{
-color: #ffffff;
-     border-bottom: 1px solid black;
-
-
+    color: #ffffff;
+    border-bottom: 1px solid black;
 }
-
 #text_input::placeholder {
-
-        color: #212f44;
-        background-image: linear-gradient(180deg, #808080 50%, #202020 100%);
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        display: inline-block;
-
+    color: #212f44;
+    background-image: linear-gradient(180deg, #808080 50%, #202020 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
 }
-
 .completed{
     transition: color .5s linear;
     text-decoration: line-through;
