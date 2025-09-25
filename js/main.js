@@ -26,26 +26,33 @@ document.addEventListener("DOMContentLoaded", () => {
         removeButton.classList.add("delete-button")
         removeButton.classList.add("button-format")
         removeButton.innerText = "🗑"
+        removeButton.style.fontSize = "1.1em";
         let completeButton = document.createElement("div")
         completeButton.classList.add("complete-button")
         completeButton.classList.add("button-format")
         completeButton.innerText = "✔";
-
+        completeButton.style.fontSize = "100%";
         nodeText.textContent = element;
         div.appendChild(newElement);
         newElement.appendChild(nodeText);
         newElement.appendChild(removeButton);
         newElement.appendChild(completeButton);
+
         removeButton.addEventListener("click", () => {
             newElement.remove();
             localStorage.removeItem(key)
             updateTaskCount()
         })
         completeButton.addEventListener("click", () => {
-            const keyToRemove = newElement.dataset.key;
-            newElement.remove();
-            localStorage.removeItem(keyToRemove);
-            updateTaskCount()
+
+            // create CSS class for this. if (text has class) class remove, else add class to text. (and animations!)
+            nodeText.classList.toggle("completed")
+
+
+            /*  const keyToRemove = newElement.dataset.key;
+              newElement.remove();
+              localStorage.removeItem(keyToRemove);
+              updateTaskCount()*/
         })
     }
 
